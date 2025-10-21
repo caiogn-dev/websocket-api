@@ -32,9 +32,19 @@ wss.on("connection", (ws) => {
     }
 
     if (msg.type === "join") {
-      // msg: { type: "join", id, name }
+      // msg: { type: "join", id, name, x, y, z, rx, ry, rz }
       ws.id = msg.id;
-      players[msg.id] = { id: msg.id, name: msg.name || "anon", x:0,y:0,z:0, rx:0,ry:0,rz:0, updatedAt: Date.now() };
+      players[msg.id] = {
+        id: msg.id,
+        name: msg.name || "anon",
+        x: msg.x,
+        y: msg.y,
+        z: msg.z,
+        rx: msg.rx,
+        ry: msg.ry,
+        rz: msg.rz,
+        updatedAt: Date.now(),
+      };
       // send snapshot to the new client
       ws.send(JSON.stringify({ type: "snapshot", players }));
       // notify others
