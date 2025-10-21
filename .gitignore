@@ -1,0 +1,47 @@
+# Node modules
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js build output
+/.next
+/out
+
+# Vercel / Netlify / deployment
+/.vercel
+/.netlify
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+/.turbo
+/.next/cache
+/dist
+
+# Assets / temp
+/public/hdris/*.exr
+/public/temp/*
